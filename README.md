@@ -1,1 +1,1 @@
-# theme-evos
+# Free Evos Wordpress theme.

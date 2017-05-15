@@ -1,0 +1,45 @@
+@function em($pixels, $context: $font-size-base) {
+	@return #{$pixels/$context}em
+}
+
+@mixin at-least($device-width) {
+  @media screen and (min-width: $device-width) {
+    @content 
+  }
+}
+
+@mixin until($device-width) {
+  @media screen and (max-width: $device-width - 1) {
+    @content 
+  }
+}
+
+@mixin font-icon {
+  font-family: $icon-family-base;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;	
+}
+
+@mixin animate($property,$time,$animateType){
+  -webkit-transition: $property $time $animateType;
+   -moz-transition: $property $time $animateType;
+     -o-transition: $property $time $animateType;
+    -ms-transition: $property $time $animateType;
+        transition: $property $time $animateType;
+}
+
+.icon-search:before { content: '\e800'; } /* '' */
+.icon-tag:before { content: '\e801'; } /* '' */
+.icon-folder-open-empty:before { content: '\f115'; } /* '' */

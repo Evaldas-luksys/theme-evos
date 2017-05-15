@@ -1,0 +1,27 @@
+.sidebar-right {
+	.sidebar {
+		padding-left: 60px;
+	}
+}
+
+.sidebar-left {
+	.main-content {
+		order: 2;
+	}
+	.sidebar {
+		order: 1;
+		padding-right: 60px;
+	}
+}
+
+.full-width {
+	.main-content {
+		width: auto;
+	}
+}
+
+.sidebar-active {
+	.inner-wrapper {
+		display: flex;
+	}
+}

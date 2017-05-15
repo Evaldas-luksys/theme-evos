@@ -1,0 +1,142 @@
+.icons {
+	list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+	.icons-item {
+		padding: 0 10px;
+		display: inline-block;
+		vertical-align: middle;
+		a {
+			color: $brand-color-dark;
+			border-bottom: 0;
+			&:hover {
+				.fa {
+					transition: color 0.2s ease;
+					color: $brand-color;
+				}
+			}
+		}
+	}
+}
+
+// .socials {
+// 	@extend %clear;
+// 	.icons {
+// 		text-align: right;
+// 		.item-icons {
+// 			padding: 0 2px;
+// 			a {
+// 				position: relative;
+// 				display: block;
+//     			min-width: 60px;
+//     			padding: 5px 20px;
+// 				margin: 2px 0;
+// 				border-radius: 2px;
+// 				text-decoration: none;
+// 				text-align: center;
+// 				color: #fff;
+				
+// 				&:hover {
+// 					color: #fff;
+// 					.fa {
+// 						color: #fff;
+// 					}
+
+// 					> .fa-plus {
+// 						opacity: 1;
+// 						visibility: visible;
+						
+// 						&:before {
+// 							transform: translate(-50%, -40%);
+// 							// transform: rotate(250deg);
+// 						}
+// 					}
+// 				}
+				
+				   
+// 				.share-text {
+// 					font-size: 14px;
+// 					display: inline-block;
+// 					margin-right: 5px;
+// 				}
+
+// 				.fa-plus {
+// 					position: absolute;
+// 					top: 0;
+// 					bottom: 0;
+// 					right: 0;
+// 					left: 0;
+// 					display: block;
+// 					background: rgba(0,0,0,0.8);
+// 					border-radius: 2px;
+// 					opacity: 0;
+// 					visibility: 0;
+// 					transition-property: visibility, opacity;
+// 					transition-duration: 0.2s;
+// 					overflow: hidden;
+
+// 					&:before {
+// 						position: absolute;
+// 						top: 50%;
+// 						left: 50%;
+// 						display: block;
+
+// 						transform: translate(-50%, 100%);
+// 						// transform: rotate(0deg);
+
+// 						transition-property: transform;
+// 						transition-delay: 0.2s;
+// 						transition-duration: 0.15s;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    @include font-icon();
+}
+
+.item-icons {
+	a {
+		&:hover {
+			color: $brand-color;
+			transition: color 200ms ease-in-out;
+		}
+
+		&:before {
+			@include font-icon();
+		}
+		&[href*='facebook']{
+			&:before {
+				content: '\f09a';
+			}
+		}
+
+		&[href*='twitter']{
+			&:before {
+				content: '\f099';
+			}
+		}
+		 
+		&[href*='instagram']{
+			&:before {
+				content: '\f16d';
+			}
+		}
+
+		&[href*='pinterest']{
+			&:before {
+				content: '\f231';
+			}
+		}
+
+		&[href*='linkedin']{
+			&:before {
+				content: '\f0e1';
+			}
+		}
+	}
+}

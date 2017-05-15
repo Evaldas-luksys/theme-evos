@@ -1,0 +1,63 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/fonts';
+
+@import 'partials/forms';
+@import 'partials/navigation';
+@import 'partials/typography';
+@import 'partials/menu';
+
+@import 'vendor/flickity';
+@import 'vendor/font-awesome.scss';
+@import 'vendor/frow.scss';
+
+@import 'modules/footer';
+@import 'modules/general';
+@import 'modules/header';
+@import 'modules/main';
+@import 'modules/sidebars';
+@import 'modules/slides';
+@import 'modules/icons';
+@import 'modules/widgets';
+@import 'modules/layout';
+@import 'modules/item';
+@import 'modules/banner';
+@import 'modules/popups';
+@import 'modules/call-to-action';
+@import 'modules/navicon';
+
+
+body {
+	font: $font-size-base $font-family-base;
+    font-weight: 400;
+    line-height: 1.6;
+    background: #fff;
+    margin:0; 
+}
+%clear:after {
+    content: ""; 
+    visibility: hidden; 
+    display: block; 
+    height: 0; 
+    clear: both;
+}
+
+.no-scroll {
+    overflow:hidden;
+}
+
+.c {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin:0 auto;
+    @extend %clear;
+}
+
+.gutter {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+a {
+    color: $link-color;
+}

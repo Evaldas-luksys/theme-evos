@@ -1,0 +1,88 @@
+.slider {
+	white-space: nowrap;
+	overflow:hidden;
+	position: relative;
+    color: #fff;
+    font-size: $font-size-alt;
+    padding:0;
+    margin:0;
+
+    &:hover {
+    	.owl-controls {
+    		.owl-prev {
+				transition: left 0.1s ease-in-out;
+				left: 0; 
+			}
+
+			.owl-next {
+				transition: right 0.1s ease-in-out;
+				right: 0;  
+			}
+    	}
+    }
+
+	.slide {
+		display: inline-block;
+		width: 100%;
+		color: #fff;
+		overflow: hidden;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+		.slider-content {
+			white-space: initial;
+			position: absolute;
+		    bottom: 40px;
+		    left: 40px;
+
+			@include until($tablet){
+		    	bottom: 10px;
+			    left: 10px;
+			    right: 10px;
+		    }
+		    .slider-content-header {
+		    	font-size: 20px;
+		    	background: rgba(175, 209, 55, 0.7);
+		    	max-width: 650px;
+		    	margin-bottom: 10px;
+		    	position: relative;
+
+		    	@include until($tablet){
+			    	display:none;
+			    }
+		    }
+		    .slider-content-body {
+		    	background: rgba(0,0,0,0.7);
+		    	max-width: 750px;
+		    	@include until($tablet){
+			    	display:none;
+			    }
+		    }
+
+		    .slider-content-header, .slider-content-body {
+		    	padding: 10px 20px;
+		    	p {
+		    		margin:0;
+		    	}
+		    }
+		}
+	}
+
+	.flickity-prev-next-button .arrow {
+		fill: #fff;
+	}
+
+	.previous, .next {
+		background: transparent; 
+		&:focus {
+			box-shadow: none;
+		}
+
+		@include until($tablet){
+	    	display:none;
+	    }
+	}
+}

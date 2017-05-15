@@ -1,0 +1,168 @@
+.widget-container {
+	margin-bottom: 35px;
+
+	a {
+		color: $text-color;
+		text-decoration: none;
+	}
+	
+	ul {
+		list-style-type: none;
+		padding:0;
+		li a {
+			margin-bottom: 10px;
+			padding-bottom: 10px;
+    		border-bottom: 1px solid #ececec;
+			display: block;
+		}
+	}
+
+	.widget-title {
+		position: relative;
+		margin-bottom: 30px;
+		&:before {
+			content: '';
+		    position: absolute;
+		    left: 0;
+		    bottom: -10px;
+		    height: 1px;
+		    width: 60px;
+		    background: #afd137;
+		}
+	}
+
+	&.widget_archive {
+		ul a {
+			&:before {
+				content: '\f115';
+				@include font-icon();
+				margin-right: 14px;
+			}
+		}
+	}
+
+	&.widget_categories {
+		a {
+			margin-right: 10px;
+		}
+	}
+
+	&.widget_calendar {
+		caption {
+			margin-bottom: 12px;
+		}
+
+		td {
+		    padding: 4px;
+		}
+	}
+
+	&.widget_search {
+		.search-field {
+			padding: 4px;
+			display: inline-block;
+    		vertical-align: middle;
+		}
+
+		.search-submit {
+			padding: 8px 14px;
+			text-transform: uppercase;
+		    font-size: 14px;
+		    line-height: 1;
+		    display: inline-block;
+		    vertical-align: middle;
+		}
+
+		.screen-reader-text {
+		    display: block;
+			margin-bottom: 5px;
+		}
+	}
+
+	&.widget_tag_cloud {
+		.tagcloud {
+			a {
+				margin-left: 5px;
+				text-decoration:none;
+				display: inline-block;
+				background: #afd137;
+				color: #fff;
+				border-radius: 3px;
+				line-height: 1;
+				margin: 5px 5px 5px 0;
+				padding: 6px 11px 6px 7px;
+				font-size: 12px !important;
+    			text-transform: uppercase;
+				font-family: $font-family-base;
+				transition: background-color 0.3s ease-out;
+
+				&:hover {
+					background: #000;
+				}
+
+				&:before {
+					font: normal normal normal 14px / 1 FontAwesome;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	&.widget_evos_social_widget {
+		li {
+			display: inline-block;
+
+			a {
+				border: none;
+			    margin-bottom: 0;
+			    padding-bottom: 0;
+			    margin-right: 7px;
+			}
+		}
+	}
+
+	&.evos_widget_recent_entries {
+		li {
+			margin-bottom: 20px;
+			.item-widget-inner {
+				width: calc(100% - 100px);
+			}
+				
+			.item-widget-title {
+				text-transform: uppercase;
+				color: #fff;
+			}
+			.item-widget-content {
+				color: #cecece;
+				font-size: 12px;
+			}
+
+			.item-post-date {
+			    font-size: 12px;
+			    margin-bottom: 3px;
+
+			    .icon {
+			    	font-size: 14px;
+			    	display: inline-block;
+			    	vertical-align: middle;
+			    	margin-right: 5px;
+			    }
+
+			    .item-post-date-inner {
+			    	display: inline-block;
+			    	vertical-align: middle;
+			    }
+			}
+
+			a {
+				border: none;
+				padding: 0;
+
+				img {
+					width: 70px;
+					height: 70px;
+				}
+			}
+		}
+	}
+}

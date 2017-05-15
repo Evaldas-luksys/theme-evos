@@ -1,0 +1,126 @@
+.main {
+    @extend %clear;
+    @include at-least($small-desktop){
+        margin-top: 40px;
+    }
+	.main-content {
+		overflow: hidden;
+    	width: 66.66%;
+    	background: #fff;
+    	@include until($small-desktop){
+    		float: none;
+    		width: 100%;
+            padding: 20px 0;
+    	}
+    	.article-image {
+    		position: relative;
+    		margin-bottom: 40px;
+    		.article-image-inner {
+    			position: relative;
+    			.featured-image {
+    				margin-bottom: 10px;
+    			}
+    			.image-caption {
+	    			position: absolute;
+	    			bottom: 0;
+	    			left: 0;
+	    			right: 0;
+	    			padding: 5px 15px;
+	    			background: rgba(0,0,0,0.5);
+	    			color: #fff;
+	    			font-size: 12px;
+	    		}
+    		}
+
+    		.image-credit {
+    			font-size: 10px;
+    			text-align: right;
+    		}
+    	}
+
+    	figure, iframe, img {
+			margin: 20px 0;
+		}
+
+		iframe, img {
+			max-width: 100%;
+			display: block;
+		}
+	}
+
+	.articles-wrapper {
+		overflow: hidden;
+		float: left;
+    	width: calc(100% - 340px);
+        padding: 30px 0;
+    	@extend %clear;
+        .grid {
+            margin: 0;
+        }
+    	@include until($small-desktop){
+    		float: none;
+    		width: 100%;
+    	}
+	}
+}
+
+.next-link {
+	text-decoration: none;
+    color: #222;
+    float: right;
+
+    &:hover {
+    	text-decoration: underline;
+    }
+
+    .fa {
+    	margin-left: 12px;
+    	vertical-align: middle;
+    }
+}
+
+.back-link {
+	text-decoration: none;
+    color: #222;
+    float: left;
+
+    &:hover {
+    	text-decoration: underline;
+    }
+
+    .fa {
+    	margin-right: 12px;
+    	vertical-align: middle;
+    }
+}
+
+.back-link, .next-link {
+	 &:hover {
+    	text-decoration: underline;
+    }
+
+    .fa {
+    	vertical-align: middle;
+    	position: relative;
+    	top: -1px;
+    }
+}
+
+.load-more {
+	display: block;
+    width: 180px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+    background: #464545;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-out;
+    border-radius: 2px;
+
+    &:hover {
+    	background: #353434;
+    }
+}

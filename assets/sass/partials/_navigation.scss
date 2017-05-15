@@ -1,0 +1,26 @@
+.pagination {
+	.screen-reader-text {
+		display: none;
+	}
+
+	.nav-links {
+	
+		.page-numbers {
+			margin-right: 5px;
+		    text-decoration: none;
+		    padding: 2px 10px;
+		    background: $brand-color;
+		    color: #fff;
+		    display: inline-block;
+
+		    &.dots {
+		    	background: transparent;
+	    		color: #000;
+		    }
+
+		    &.current {
+		    	background: darken($brand-color, 15%);
+		    }
+		}
+	}
+}

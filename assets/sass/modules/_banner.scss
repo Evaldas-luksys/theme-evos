@@ -1,0 +1,19 @@
+.top-banner {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .top-banner-inner {
+    	position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    left: 0;
+	    right: 0;
+	   	text-align: center;
+	   	
+	   	.main-title {
+	   		color: #fff;
+	   	}
+	}
+}

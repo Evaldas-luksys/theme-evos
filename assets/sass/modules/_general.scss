@@ -1,0 +1,56 @@
+input, textarea, keygen, select, button {
+	font-family:$font-family-base;
+	font-size: $font-size-base;
+}
+
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail, 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.inner-wrapper {
+	margin-bottom: 10px;
+
+	.inner-body {
+		display: inline-block;
+		vertical-align: middle;
+		width: 72%;
+		padding-left: 10px;
+	}
+	.featured-image {
+		margin: 6px 0 0 0;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.def-link {
+	text-decoration: none;
+	color: $text-color;
+	display: block;
+	transition: color 0.2s ease-out;
+
+    * {
+        transition: color 0.2s ease-out;
+    }
+
+    &:hover {
+    	color: $brand-color;
+    }
+}
+
+.separator {
+	width: 60px;
+	height: 2px;
+	background-color: $brand-color;
+	display: inline-block;
+}
+
+.main-title {
+	margin-top: 50px;
+}
